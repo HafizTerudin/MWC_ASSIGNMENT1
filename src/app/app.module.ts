@@ -7,6 +7,7 @@ import {AngularFireModule} from "angularfire2";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { FIREBASED_CONFIG } from "./app.firebase.config";
 
 @NgModule({
   declarations: [
@@ -15,8 +16,8 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp) 
-    AngularFireModule.initializeApp()
+    IonicModule.forRoot(MyApp), 
+    AngularFireModule.initializeApp(FIREBASED_CONFIG)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
